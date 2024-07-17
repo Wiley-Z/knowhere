@@ -49,7 +49,7 @@ struct GpuRaftIvfPqConfig : public IvfPqConfig {
         KNOWHERE_CONFIG_DECLARE_FIELD(k)
             .set_default(10)
             .description("search for top k similar vector.")
-            .set_range(1, 1024)  // Declared in base but limited to 1024
+            .set_range(1, 1048576)  // Declared in base but limited to 1024
             .for_search();
         KNOWHERE_CONFIG_DECLARE_FIELD(m).set_default(0).description("m").set_range(0, 65536).for_train();
         KNOWHERE_CONFIG_DECLARE_FIELD(nbits)
